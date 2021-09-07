@@ -17,7 +17,7 @@ body {
   gap: 1vh;
   background-color: #eee;
   font-weight: bold;
-  text-transform: uppercase;
+  text-align: center;
 }
 
 .header {
