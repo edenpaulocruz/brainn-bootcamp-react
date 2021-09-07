@@ -1,35 +1,40 @@
 function App () {
   return (
-    <>
-      <h1>App</h1>
+    <div className='app'>
       <Header />
-      <Menu />
       <Content />
       <Sidebar />
       <Footer />
-    </>
+    </div>
   )
 }
 
 function Header () {
   return (
-    <header>
-      Header
+    <header className='header'>
+      <Title />
+      <Menu />
     </header>
   )
 }
 
 function Menu () {
   return (
-    <nav>
+    <nav className='nav'>
       Menu
     </nav>
   )
 }
 
+function Title () {
+  return (
+    <h1>App</h1>
+  )
+}
+
 function Content () {
   return (
-    <main>
+    <main className='main'>
       Conteúdo
     </main>
   )
@@ -37,7 +42,7 @@ function Content () {
 
 function Sidebar () {
   return (
-    <aside>
+    <aside className='aside'>
       Sidebar
     </aside>
   )
@@ -45,7 +50,7 @@ function Sidebar () {
 
 function Footer () {
   return (
-    <footer>
+    <footer className='footer'>
       Footer
     </footer>
   )
