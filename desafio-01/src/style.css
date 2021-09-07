@@ -54,3 +54,31 @@ body {
 .footer {
   grid-area: footer;
 }
+
+.button {
+  width: 8rem;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.secondary {
+  background-color: transparent;
+}
+
+.secondary:hover {
+  background-color: #000;
+  color: #fff;
+}
