@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template:
+    "header header header header" 8vh
+    "nav nav nav nav" 5vh
+    "aside main main main" 75vh
+    "footer footer footer footer" 5vh;
+  gap: 1rem;
+}
+
+header {
+  background-color: #ffff00;
+  grid-area: header;
+}
+
+nav {
+  background-color: #9acd32;
+  grid-area: nav;
+}
+
+main {
+  background-color: #008000;
+  grid-area: main;
+}
+
+aside {
+  background-color: #6495ed;
+  grid-area: aside;
+}
+
+footer {
+  background-color: #ffa500;
+  grid-area: footer;
+}
