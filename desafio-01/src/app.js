@@ -1,7 +1,7 @@
-import Header from './header'
-import Content from './content'
-import Sidebar from './sidebar'
-import Footer from './footer'
+import { Header } from './header'
+import { Content } from './content'
+import { Sidebar } from './sidebar'
+import { Footer } from './footer'
 
 function App () {
   return (

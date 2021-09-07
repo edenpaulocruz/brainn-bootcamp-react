@@ -1,8 +1,18 @@
+#root {
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --color-accent: #f36;
+  --color-text: #777;
+  --color-border: #eee;
+  --font-default: 'TTInterfaces',Arial,Helvetica,sans-serif;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
+  box-sizing: border-box;
+  font-family: var(--font-default);  
+}  
 
 body {
   height: 100vh;
@@ -15,9 +25,7 @@ body {
     "aside main main main" 85vh
     "footer footer footer footer" 5vh;
   gap: 1vh;
-  background-color: #eee;
-  font-weight: bold;
-  text-align: center;
+  background-color: var(--color-secondary);
 }
 
 .header {
@@ -29,18 +37,44 @@ body {
 }
 
 .header,
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.header,
 .main,
 .aside,
 .footer {
-  background-color: #999;
   padding: 2vh;
 }
 
 .nav {
-  min-width: 40%;
-  max-width: 75%;
-  background-color: #ccc;
+  width: 100%;
   padding: 1vh;
+  text-align: center;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.5rem;
+  color: inherit;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
 }
 
 .main {
@@ -53,32 +87,46 @@ body {
 
 .footer {
   grid-area: footer;
+  font-size: .8rem;
+  text-align: right;
 }
 
 .button {
   width: 8rem;
-  margin: 1rem;
-  padding: 1rem;
-  border: 2px solid #000;
+  padding: .7rem;
+  border: 2px solid var(--color-accent);
+  box-shadow: none;
+  color: #fff;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 }
 
 .primary {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-accent);
 }
 
 .primary:hover {
   background-color: transparent;
-  color: #000;
+  color: var(--color-accent)
 }
 
 .secondary {
   background-color: transparent;
+  color: var(--color-accent);
 }
 
 .secondary:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+.content-heading,
+.text {
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  color: var(--color-text);
+  line-height: 1.5;
 }

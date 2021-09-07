@@ -1,9 +1,9 @@
 function Footer () {
   return (
     <footer className='footer'>
-      Footer
+      Alguns direitos reservados.
     </footer>
   )
 }
 
-export default Footer
+export { Footer }

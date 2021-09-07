@@ -1,13 +1,15 @@
-import * as title from "./title"
-import Menu from "./menu"
+import * as title from './title'
+import { Menu } from './menu'
+import { Button } from './button'
 
 function Header () {
   return (
     <header className='header'>
       <title.Heading1>App</title.Heading1>
       <Menu />
+      <Button kind='secondary' text='Diga olá' />
     </header>
   )
 }
 
-export default Header
+export { Header }
