@@ -48,90 +48,69 @@ const members = [
         </ul>
       </>
   },
-  /*{
+  {
     id: 3,
     title: 'Adeonir Kohl',
     content:
-    <>
-      <Title.Heading3></Title.Heading3>
-      <p></p>
-      <Title.Heading4>Experience</Title.Heading4>
-      <ul>
-        <li className="experience"><span></span></li>
-        <li className="experience"><span></span></li>
-      </ul>
-    </> {
-      avatar: 'https://pbs.twimg.com/profile_images/1369253967939657729/q6bEIJ7A_400x400.jpg',
-      role: 'Frontend Developer',
-      description: 'Web developer with background in Graphic Design and Photography.',
-      experience: [
-        {
-          role: 'Web Developer and Visual Designer',
-          company: 'Freelance'
-        },
-        {
-          role: 'Lead UI Engineer',
-          company: 'Joyjet Digital Space Agency'
-        }
-      ]
-    }
+      <>
+        <Title.Heading3>Frontend Developer</Title.Heading3>
+        <img src='https://pbs.twimg.com/profile_images/1369253967939657729/q6bEIJ7A_400x400.jpg' alt='Adeonir Kohl'/>
+        <p>Web developer with background in Graphic Design and Photography.</p>
+        <Title.Heading4>Experience</Title.Heading4>
+        <ul>
+          <li className="experience">
+            <Title.Heading4>Web Developer and Visual Designer</Title.Heading4>
+            Freelance
+          </li>
+          <li className="experience">
+            <Title.Heading4>Lead UI Engineer</Title.Heading4>
+            Joyjet Digital Space Agency
+          </li>
+        </ul>
+      </>
   },
   {
     id: 4,
     title: 'Amorésio de Souza',
     content:
     <>
-      <Title.Heading3></Title.Heading3>
-      <p></p>
+      <Title.Heading3>Backend Product Developer</Title.Heading3>
+      <img src='https://pbs.twimg.com/profile_images/1419345932177510403/NQEr_zI6_400x400.jpg' alt='Amorésio de Souza' />
+      <p>Computer Science Academic. Passionate about programming.</p>
       <Title.Heading4>Experience</Title.Heading4>
       <ul>
-        <li className="experience"><span></span></li>
-        <li className="experience"><span></span></li>
+        <li className="experience">
+          <Title.Heading4>Analista Programador</Title.Heading4>
+          Grupo Cometa
+        </li>
+        <li className="experience">
+          <Title.Heading4>Estagiário</Title.Heading4>
+          Unemat Oficial - RISC Redes Inteligentes e Soluções Criativas
+        </li>
       </ul>
-    </> {
-      avatar: 'https://pbs.twimg.com/profile_images/1419345932177510403/NQEr_zI6_400x400.jpg',
-      role: 'Backend Product Developer',
-      description: 'Computer Science Academic. Passionate about programming.',
-      experience: [
-        {
-          role: 'Analista Programador',
-          company: 'Grupo Cometa'
-        },
-        {
-          role: 'Estagiário',
-          company: 'Unemat Oficial - RISC Redes Inteligentes e Soluções Criativas'
-        }
-      ]
-    }
+    </>
   },
   {
     id: 5,
     title: 'Pedro Azevedo',
     content:
     <>
-      <Title.Heading3></Title.Heading3>
-      <p></p>
+      <Title.Heading3>Front-End Developer | JavaScript | React Native | React</Title.Heading3>
+      <img src="https://pbs.twimg.com/profile_images/1392878203606380545/ZYa3HMEt_400x400.jpg" alt="Pedro Azevedo" />
+      <p>Always willing to learn new technologies to improve my knowledge skills.</p>
       <Title.Heading4>Experience</Title.Heading4>
       <ul>
-        <li className="experience"><span></span></li>
-        <li className="experience"><span></span></li>
+        <li className="experience">
+          <Title.Heading4>Mobile Developer | React-Native</Title.Heading4>
+          Midway
+        </li>
+        <li className="experience">
+          <Title.Heading4>JavaScript Developer | React | React-Native</Title.Heading4>
+          Concrete Solutions
+        </li>
       </ul>
-    </> {
-      avatar: 'https://pbs.twimg.com/profile_images/1392878203606380545/ZYa3HMEt_400x400.jpg',
-      role: 'Front-End Developer | JavaScript | React Native | React',
-      description: 'Always willing to learn new technologies to improve my knowledge skills.',
-      experience: [
-        {
-          role: 'Mobile Developer | React-Native',
-          company: 'Midway'
-        },
-        {
-          role: 'JavaScript Developer | React | React-Native',
-          company: 'Concrete Solutions'
-        }
-      ]
-    }
-  }*/
+    </>
+  }
 ]
 
 function App () {
