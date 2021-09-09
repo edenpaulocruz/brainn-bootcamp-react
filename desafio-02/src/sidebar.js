@@ -6,7 +6,7 @@ function Sidebar ({ content }) {
       <Heading2>Our team</Heading2>
       {content.map((item) => (
         <>
-          <a href="http:" className='aside-link'>{item.title}</a>
+          <button className='aside-link'>{item.title}</button>
         </>
       ))}
     </aside>
