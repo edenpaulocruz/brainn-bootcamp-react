@@ -1,10 +1,10 @@
-import { Heading2 } from "./title"
+import { Heading1 } from "./title"
 
-function Sidebar ({ content }) {
+function Sidebar ({ sidebarContent }) {
   return (
     <aside className='aside'>
-      <Heading2>Our team</Heading2>
-      {content.map((item) => (
+      <Heading1>Our team</Heading1>
+      {sidebarContent.map((item) => (
         <>
           <button className='aside-link'>{item.title}</button>
         </>
