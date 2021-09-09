@@ -32,10 +32,10 @@ const members = [
     title: 'Diego Moretti',
     content:
       <>
-        <Title.Heading3>Developer Relations</Title.Heading3>
+        <Title.Heading2>Developer Relations</Title.Heading2>
         <img src='https://pbs.twimg.com/profile_images/1432437836800794636/_TEdKmBy_400x400.jpg' alt='Diego Moretti'/>
         <p>Tech, Web &amp; Community specialist.</p>
-        <Title.Heading4>Experience</Title.Heading4>
+        <Title.Heading3>Experience</Title.Heading3>
         <ul>
           <li className="experience">
             <Title.Heading4>Co-Creator &amp; Member</Title.Heading4>
@@ -53,10 +53,10 @@ const members = [
     title: 'Adeonir Kohl',
     content:
       <>
-        <Title.Heading3>Frontend Developer</Title.Heading3>
+        <Title.Heading2>Frontend Developer</Title.Heading2>
         <img src='https://pbs.twimg.com/profile_images/1369253967939657729/q6bEIJ7A_400x400.jpg' alt='Adeonir Kohl'/>
         <p>Web developer with background in Graphic Design and Photography.</p>
-        <Title.Heading4>Experience</Title.Heading4>
+        <Title.Heading3>Experience</Title.Heading3>
         <ul>
           <li className="experience">
             <Title.Heading4>Web Developer and Visual Designer</Title.Heading4>
@@ -74,10 +74,10 @@ const members = [
     title: 'Amorésio de Souza',
     content:
     <>
-      <Title.Heading3>Backend Product Developer</Title.Heading3>
+      <Title.Heading2>Backend Product Developer</Title.Heading2>
       <img src='https://pbs.twimg.com/profile_images/1419345932177510403/NQEr_zI6_400x400.jpg' alt='Amorésio de Souza' />
       <p>Computer Science Academic. Passionate about programming.</p>
-      <Title.Heading4>Experience</Title.Heading4>
+      <Title.Heading3>Experience</Title.Heading3>
       <ul>
         <li className="experience">
           <Title.Heading4>Analista Programador</Title.Heading4>
@@ -95,10 +95,10 @@ const members = [
     title: 'Pedro Azevedo',
     content:
     <>
-      <Title.Heading3>Front-End Developer | JavaScript | React Native | React</Title.Heading3>
+      <Title.Heading2>Front-End Developer | JavaScript | React Native | React</Title.Heading2>
       <img src="https://pbs.twimg.com/profile_images/1392878203606380545/ZYa3HMEt_400x400.jpg" alt="Pedro Azevedo" />
       <p>Always willing to learn new technologies to improve my knowledge skills.</p>
-      <Title.Heading4>Experience</Title.Heading4>
+      <Title.Heading3>Experience</Title.Heading3>
       <ul>
         <li className="experience">
           <Title.Heading4>Mobile Developer | React-Native</Title.Heading4>
@@ -113,9 +113,16 @@ const members = [
   }
 ]
 
+
 function App () {
   const [title, setTitle] = useState(members[0].title)
-  const [content, setText] = useState(members[0].content)
+  const [content, setContent] = useState(members[0].content)
+
+  function handleClick(id) {
+    const memberActive = members.find((member) => member.id === id)
+    setTitle(memberActive.title)
+    setContent(memberActive.content)
+  }
 
   return (
     <div className='app'>
@@ -124,7 +131,7 @@ function App () {
         title={title}
         content={content}
       />
-      <Sidebar sidebarContent={members} />
+      <Sidebar sidebarContent={members} handleClick={handleClick} />
       <Footer />
     </div>
   )
