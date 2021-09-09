@@ -106,7 +106,7 @@ function App () {
     <div className='app'>
       <Header />
       <Content />
-      <Sidebar />
+      <Sidebar content={team}/>
       <Footer />
     </div>
   )
