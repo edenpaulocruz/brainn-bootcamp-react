@@ -7,7 +7,7 @@ function Header () {
     <header className='header'>
       <title.Heading1>App</title.Heading1>
       <Menu />
-      <Button kind='secondary' text='Diga olá' />
+      <Button kind='secondary' text='Say Hello' />
     </header>
   )
 }

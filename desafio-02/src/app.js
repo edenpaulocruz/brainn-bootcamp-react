@@ -61,7 +61,7 @@ const members = [
     title: 'Adeonir Kohl',
     content:
       <>
-        <Title.Heading2>Frontend Developer</Title.Heading2>
+        <Title.Heading2>Front-end Developer</Title.Heading2>
         <div className='member-avatar'>
           <img src='https://pbs.twimg.com/profile_images/1369253967939657729/q6bEIJ7A_400x400.jpg' className='avatar' alt='Adeonir Kohl'/>
         </div>
@@ -86,7 +86,7 @@ const members = [
     title: 'Amorésio de Souza',
     content:
     <>
-      <Title.Heading2>Backend Product Developer</Title.Heading2>
+      <Title.Heading2>Back-end Product Developer</Title.Heading2>
       <div className='member-avatar'>
         <img src='https://pbs.twimg.com/profile_images/1419345932177510403/NQEr_zI6_400x400.jpg' className='avatar' alt='Amorésio de Souza' />
       </div>
@@ -126,6 +126,31 @@ const members = [
           <li className="experience">
             <Title.Heading4>JavaScript Developer | React | React-Native</Title.Heading4>
             Concrete Solutions
+          </li>
+        </ul>
+      </div>
+    </>
+  },
+  {
+    id: 6,
+    title: 'Eden Paulo Cruz',
+    content:
+    <>
+      <Title.Heading2>Front-End Developer | JavaScript | React</Title.Heading2>
+      <div className='member-avatar'>
+        <img src='https://pbs.twimg.com/profile_images/1252312349882626048/ZU7vOk2W_400x400.jpg' className='avatar' alt="Eden Paulo Cruz" />
+      </div>
+      <div className='member-description'>
+        <p>Eternal apprentice! Passionate about programming and always ready to help.</p>
+        <Title.Heading3>Experience</Title.Heading3>
+        <ul>
+          <li className="experience">
+            <Title.Heading4>Web Developer</Title.Heading4>
+            Freelancer
+          </li>
+          <li className="experience">
+            <Title.Heading4>IT Technician</Title.Heading4>
+            Self Employee
           </li>
         </ul>
       </div>

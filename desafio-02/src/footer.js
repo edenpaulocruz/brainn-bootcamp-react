@@ -1,7 +1,7 @@
 function Footer () {
   return (
     <footer className='footer'>
-      Alguns direitos reservados.
+      Some rights reserved.
     </footer>
   )
 }
