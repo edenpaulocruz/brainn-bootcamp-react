@@ -4,7 +4,7 @@ function Content ({title, content}) {
   return (
     <main className='main'>
       <>
-        <Heading1>{title}</Heading1>
+        <Heading1 className="member-name">{title}</Heading1>
         <>{content}</>
       </>
     </main>
