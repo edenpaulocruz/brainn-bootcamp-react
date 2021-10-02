@@ -1,6 +1,6 @@
-function Form() {
+function Form({ handleSubmit }) {
   return (
-    <form className='car-form'>
+    <form className='car-form' onSubmit={handleSubmit}>
       <h2 className='car-title'>Formulário de Cadastro</h2>
       <div className='input'>
         <input className='input-field' type='url' placeholder='URL para foto do carro' name='image' autoFocus />
