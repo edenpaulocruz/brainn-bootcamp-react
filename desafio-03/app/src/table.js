@@ -1,4 +1,4 @@
-function Table({ cars }) {
+function Table({ cars, errorMessage }) {
   return (
     <div className='car-list'>
       <h2 className='car-title'>Relação de veículos</h2>
@@ -25,7 +25,8 @@ function Table({ cars }) {
                   <div style={{
                     width: '100px',
                     height: '100px',
-                    backgroundColor: car.color
+                    backgroundColor: car.color,
+                    border: '1px solid #000'
                   }} />
                 </td>
                 <td><button>Excluir</button></td>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Form from './form'
 import Table from './table'
+import { ErrorMessage } from './messages'
 import './app.css'
 
 const url = 'http://localhost:3333/cars'
@@ -17,10 +18,22 @@ function App() {
         setErrorMessage(result.message)
         return
       }
-      
+
       setCars(result)
     })
   }, []);
+
+  useEffect(() => {
+    let timer
+
+    if (errorMessage !== null) {
+      timer = setTimeout(() => {
+        setErrorMessage(null)
+      }, 5000)
+    }
+
+    return () => clearTimeout(timer)
+  }, [errorMessage])
 
   const getFormElement = event => elementName => {
     return event.target.elements[elementName]
@@ -60,8 +73,11 @@ function App() {
 
   return (
     <div className='app'>
+      {errorMessage !== null && (
+        <ErrorMessage message={errorMessage} />
+      )}
       <Form handleSubmit={handleSubmit} />
-      <Table cars={cars} />
+      <Table cars={cars} errorMessage={errorMessage} />
     </div>
   )
 }

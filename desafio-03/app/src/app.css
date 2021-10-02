@@ -1,6 +1,7 @@
 /* ===== APP ===== */
 .app {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
 }
 
@@ -58,4 +59,13 @@
 
 .car-table tr:nth-child(odd) {
   background-color: #fff;
+}
+
+/* ===== ERRO MESSAGE ===== */
+.error-message {
+  width: 100%;
+  padding: 15px;
+  background-color: #f00;
+  color: #fff;
+  text-align: center;
 }
