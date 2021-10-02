@@ -1,4 +1,4 @@
-function Table() {
+function Table({ cars }) {
   return (
     <div className='car-list'>
       <h2 className='car-title'>Relação de veículos</h2>
@@ -13,9 +13,19 @@ function Table() {
             <th></th>
           </tr>
         </thead>
-        <tbody />
+        <tbody>
+          {!!(cars.length === 0) && <NoCarsMessage />}
+        </tbody>
       </table>
     </div>
+  )
+}
+
+function NoCarsMessage() {
+  return (
+    <tr>
+      <td colSpan='6'>Nenhum carro cadastrado</td>
+    </tr>
   )
 }
 
