@@ -8,7 +8,7 @@ const url = 'http://localhost:3333/cars'
 
 function App() {
   const [cars, setCars] = useState([])
-  const [errorMessage, setErrorMessage] = useState([null])
+  const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
     fetch(url)
