@@ -14,10 +14,23 @@ function App() {
     .then(result => setCars(result))
   }, []);
 
+  const getFormElement = event => elementName => {
+    return event.target.elements[elementName]
+  }
+
   const handleSubmit = event => {
     event.preventDefault()
-
-    console.log('Clicou para cadastrar')
+    
+    const getElement = getFormElement(event)
+    
+    const data = {
+      image: getElement('image').value,
+      brandModel: getElement('brandModel').value,
+      year: getElement('year').value,
+      plate: getElement('plate').value,
+      color: getElement('color').value
+    }
+    console.log(data)
   }
 
   return (
