@@ -1,7 +1,7 @@
 function Form() {
   return (
     <form className='car-form'>
-      <h2 className='car-form-title'>Formulário de Cadastro</h2>
+      <h2 className='car-title'>Formulário de Cadastro</h2>
       <div className='input'>
         <input className='input-field' type='url' placeholder='URL para foto do carro' name='image' autoFocus />
       </div>
