@@ -7,11 +7,19 @@ const url = 'http://localhost:3333/cars'
 
 function App() {
   const [cars, setCars] = useState([])
+  const [errorMessage, setErrorMessage] = useState([null])
 
   useEffect(() => {
     fetch(url)
     .then(result => result.json())
-    .then(result => setCars(result))
+    .then(result => {
+      if (result.error) {
+        setErrorMessage(result.message)
+        return
+      }
+      
+      setCars(result)
+    })
   }, []);
 
   const getFormElement = event => elementName => {
@@ -39,6 +47,11 @@ function App() {
       },
       body: JSON.stringify(data)
     }).then(result => result.json())
+
+    if (result.error) {
+      setErrorMessage(result.message)
+      return
+    }
 
     setCars(cars => cars.concat(data))
     event.target.reset()
