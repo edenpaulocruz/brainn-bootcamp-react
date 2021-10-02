@@ -18,10 +18,11 @@ function App() {
     return event.target.elements[elementName]
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     
     const getElement = getFormElement(event)
+    const image = getElement('image')
     
     const data = {
       image: getElement('image').value,
@@ -30,7 +31,18 @@ function App() {
       plate: getElement('plate').value,
       color: getElement('color').value
     }
-    console.log(data)
+
+    const result = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    }).then(result => result.json())
+
+    setCars(cars => cars.concat(data))
+    event.target.reset()
+    image.focus()
   }
 
   return (
