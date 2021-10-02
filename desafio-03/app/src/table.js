@@ -14,6 +14,25 @@ function Table({ cars }) {
           </tr>
         </thead>
         <tbody>
+          {cars.map(car => {
+            return (
+              <tr key={car.plate}>
+                <td><img src={car.image} alt={car.brandModel} /></td>
+                <td>{car.brandModel}</td>
+                <td>{car.year}</td>
+                <td>{car.plate}</td>
+                <td>
+                  <div style={{
+                    width: '100px',
+                    height: '100px',
+                    backgroundColor: car.color
+                  }} />
+                </td>
+                <td><button>Excluir</button></td>
+              </tr>
+            )
+          })}
+
           {!!(cars.length === 0) && <NoCarsMessage />}
         </tbody>
       </table>
