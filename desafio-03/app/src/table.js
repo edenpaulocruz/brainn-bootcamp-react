@@ -1,4 +1,4 @@
-function Table({ cars, errorMessage }) {
+function Table({ cars, handleDelete }) {
   return (
     <div className='car-list'>
       <h2 className='car-title'>Relação de veículos</h2>
@@ -29,7 +29,7 @@ function Table({ cars, errorMessage }) {
                     border: '1px solid #000'
                   }} />
                 </td>
-                <td><button>Excluir</button></td>
+                <td><button data-plate={car.plate} onClick={handleDelete}>Excluir</button></td>
               </tr>
             )
           })}

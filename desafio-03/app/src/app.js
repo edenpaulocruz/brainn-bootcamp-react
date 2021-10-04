@@ -71,13 +71,19 @@ function App() {
     image.focus()
   }
 
+  const handleDelete = event => {
+    const button = event.target
+    const plate = button.dataset.plate
+    console.log('Clicou para excluir o veículo, placa ', plate)
+  }
+
   return (
     <div className='app'>
       {errorMessage !== null && (
         <ErrorMessage message={errorMessage} />
       )}
       <Form handleSubmit={handleSubmit} />
-      <Table cars={cars} errorMessage={errorMessage} />
+      <Table cars={cars} handleDelete={handleDelete} />
     </div>
   )
 }
