@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { get, post, del } from './http'
 import Form from './form'
 import Table from './table'
 import { ErrorMessage } from './messages'
@@ -11,9 +12,7 @@ function App() {
   const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
-    fetch(url)
-    .then(result => result.json())
-    .then(result => {
+    get(url).then(result => {
       if (result.error) {
         setErrorMessage(result.message)
         return
@@ -53,13 +52,7 @@ function App() {
       color: getElement('color').value
     }
 
-    const result = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    }).then(result => result.json())
+    const result = await post(url, data)
 
     if (result.error) {
       setErrorMessage(result.message)
@@ -71,17 +64,8 @@ function App() {
     image.focus()
   }
 
-  const handleDelete = async (event) => {
-    const button = event.target
-    const plate = button.dataset.plate
-
-    const result = await fetch(url, {
-      method: 'DELETE',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify({ plate })
-    }).then(result => result.json())
+  const handleDelete = async (plate) => {
+    const result = await del(url, { plate })
 
     if (result.error) {
       setErrorMessage(result.message)

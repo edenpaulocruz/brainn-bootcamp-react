@@ -29,7 +29,9 @@ function Table({ cars, handleDelete }) {
                     border: '1px solid #000'
                   }} />
                 </td>
-                <td><button data-plate={car.plate} onClick={handleDelete}>Excluir</button></td>
+                <td>
+                  <button onClick={() => handleDelete(car.plate)}>Excluir</button>
+                </td>
               </tr>
             )
           })}
