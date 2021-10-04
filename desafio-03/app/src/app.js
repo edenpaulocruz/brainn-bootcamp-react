@@ -71,10 +71,24 @@ function App() {
     image.focus()
   }
 
-  const handleDelete = event => {
+  const handleDelete = async (event) => {
     const button = event.target
     const plate = button.dataset.plate
-    console.log('Clicou para excluir o veículo, placa ', plate)
+
+    const result = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({ plate })
+    }).then(result => result.json())
+
+    if (result.error) {
+      setErrorMessage(result.message)
+      return
+    }
+
+    setCars(cars => cars.filter(car => car.plate !== plate))
   }
 
   return (
