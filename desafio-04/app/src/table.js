@@ -1,7 +1,9 @@
+import Title from "./title"
+
 function Table({ cars, handleDelete }) {
   return (
     <div className='car-list'>
-      <h2 className='car-title'>Relação de veículos</h2>
+      <Title>Relação de veículos</Title>
       <table className='car-table'>
         <thead>
           <tr>

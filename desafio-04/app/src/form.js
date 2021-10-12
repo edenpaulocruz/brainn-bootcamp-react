@@ -1,29 +1,63 @@
+import styled from 'styled-components'
+import Title from './title'
+
+const CarForm = styled.form`
+  width: 25%;
+  height: 100vh;
+  padding: 40px 20px 20px;
+  background-color: #faecbe;
+  position: fixed;
+`
+
+const InputDiv = styled.div`
+  margin-bottom: 10px;
+`
+
+const InputField = styled.input`
+  width: 100%;  
+  padding: 5px;
+  font-size: 1rem;
+`
+
+const Button = styled.button`
+  width: 100%;  
+  padding: 5px;
+  font-size: 1rem;
+  background-color: #407be9;
+  color: #fff;
+  font-weight: bold;
+
+  &:hover {
+    background-color: #244687;
+  }
+`
+
 function Form({ handleSubmit }) {
   return (
-    <form className='car-form' onSubmit={handleSubmit}>
-      <h2 className='car-title'>Formulário de Cadastro</h2>
-      <div className='input'>
-        <input className='input-field' type='url' placeholder='URL para foto do carro' name='image' autoFocus />
-      </div>
+    <CarForm onSubmit={handleSubmit}>
+      <Title>Formulário de Cadastro</Title>
+      <InputDiv>
+        <InputField type='url' placeholder='URL para foto do carro' name='image' autoFocus />
+      </InputDiv>
       
-      <div className='input'>
-        <input className='input-field' type='text' placeholder='Marca / Modelo' name='brandModel' />
-      </div>
+      <InputDiv>
+        <InputField type='text' placeholder='Marca / Modelo' name='brandModel' />
+      </InputDiv>
       
-      <div className='input'>
-        <input className='input-field' type='number' placeholder='Ano' name='year' />
-      </div>
+      <InputDiv>
+        <InputField type='number' placeholder='Ano' name='year' />
+      </InputDiv>
       
-      <div className='input'>
-        <input className='input-field' type='text' placeholder='Placa' name='plate' />
-      </div>
+      <InputDiv>
+        <InputField type='text' placeholder='Placa' name='plate' />
+      </InputDiv>
       
-      <div className='input'>
-        <input className='input-field' type='text' placeholder='Cor do carro' name='color' />
-      </div>
+      <InputDiv>
+        <InputField type='text' placeholder='Cor do carro' name='color' />
+      </InputDiv>
       
-      <button className='car-form-button' type="submit">Cadastrar</button>
-    </form>
+      <Button>Cadastrar</Button>
+    </CarForm>
   )
 }
 
