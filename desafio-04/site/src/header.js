@@ -1,15 +1,14 @@
-import * as title from './title'
-import { Menu } from './menu'
-import { Button } from './button'
+import styled from 'styled-components'
 
-function Header () {
-  return (
-    <header className='header'>
-      <title.Heading1>App</title.Heading1>
-      <Menu />
-      <Button kind='secondary' text='Say Hello' />
-    </header>
-  )
-}
+const Header = styled.header`
+  width: 100%;
+  order: -2;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 2rem;
+`
 
-export { Header }
+export default Header

@@ -1,9 +1,41 @@
 import { useState } from 'react'
-import { Header } from './header'
+import { createGlobalStyle } from 'styled-components'
+import Header from './header'
+import * as Title from './title'
+import Menu from './menu'
+import { ButtonSecondary } from './button'
 import { Content } from './content'
 import { Sidebar } from './sidebar'
 import { Footer } from './footer'
-import * as Title from './title'
+
+const GlobalStyle = createGlobalStyle`
+  #root {
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-accent: #f36;
+    --color-text: #777;
+    --color-border: #eee;
+    --font-default: 'TTInterfaces',Arial,Helvetica,sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: var(--font-default);  
+  }  
+
+  body {
+    height: 100vh;
+  }
+
+  .app {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+`
 
 const members = [
   {
@@ -88,7 +120,7 @@ const members = [
     <>
       <Title.Heading2>Back-end Product Developer</Title.Heading2>
       <div className='member-avatar'>
-        <img src='https://pbs.twimg.com/profile_images/1419345932177510403/NQEr_zI6_400x400.jpg' className='avatar' alt='Amorésio de Souza' />
+        <img src='https://media-exp1.licdn.com/dms/image/C4D03AQHEvTjMNVNe7g/profile-displayphoto-shrink_800_800/0/1623081943299?e=1639008000&v=beta&t=CWuRsGOlYzAqj86haqG-yRbe7C3BFVPpEF62S-Dblk8' className='avatar' alt='Amorésio de Souza' />
       </div>
       <div className='member-description'>
         <p>Computer Science Academic. Passionate about programming.</p>
@@ -171,7 +203,12 @@ function App () {
 
   return (
     <div className='app'>
-      <Header />
+      <GlobalStyle />
+      <Header>
+        <Title.Heading1>App</Title.Heading1>
+        <Menu />
+        <ButtonSecondary>Say Hello</ButtonSecondary>
+      </Header>
       <Content 
         title={title}
         content={content}

@@ -1,8 +1,6 @@
-function Heading1 ({ children }) {
-  return (
-    <h1>{children}</h1>
-  )
-}
+import styled from 'styled-components'
+
+const Heading1 = styled.h1``
 
 function Heading2 ({ children }) {
   return (
