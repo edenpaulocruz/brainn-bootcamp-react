@@ -4,7 +4,7 @@ import Header from './header'
 import * as Title from './title'
 import Menu from './menu'
 import { ButtonSecondary } from './button'
-import { Content } from './content'
+import { Content, MemberAvatar, MemberPosition } from './content'
 import { Sidebar } from './sidebar'
 import { Footer } from './footer'
 
@@ -43,10 +43,10 @@ const members = [
     title: 'Fernando Daciuk',
     content:
       <>
-        <Title.Heading2 className='member-name'>Tech Lead | Software Developer</Title.Heading2>
-        <div className='member-avatar'>
-          <img src='https://pbs.twimg.com/profile_images/1415288716415877121/zK7lC5Ns.jpg' className='avatar' alt='Ferando Daciuk' />
-        </div>
+        <MemberPosition>Tech Lead | Software Developer</MemberPosition>
+        <MemberAvatar>
+          <img src='https://pbs.twimg.com/profile_images/1415288716415877121/zK7lC5Ns.jpg' alt='Fernando Daciuk' />
+        </MemberAvatar>
         <div className='member-description'>
           <p>Teacher and web developer, focused on JavaScript, both on client and server (with Node.js).</p>
           <Title.Heading3>Experience</Title.Heading3>
