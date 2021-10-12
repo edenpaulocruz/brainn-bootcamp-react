@@ -1,9 +1,32 @@
 import { useState, useEffect } from 'react'
 import { get, post, del } from './http'
+import { createGlobalStyle } from 'styled-components'
 import Form from './form'
 import Table from './table'
 import { ErrorMessage } from './messages'
-import './app.css'
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+  }  
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+
+  .app {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+`
 
 const url = 'http://localhost:3333/cars'
 
@@ -77,6 +100,7 @@ function App() {
 
   return (
     <div className='app'>
+      <GlobalStyle />
       {errorMessage !== null && (
         <ErrorMessage message={errorMessage} />
       )}
