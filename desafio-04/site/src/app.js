@@ -6,7 +6,7 @@ import Menu from './menu'
 import { ButtonSecondary } from './button'
 import { Content, MemberAvatar, MemberPosition, MemberDescription } from './content'
 import { Sidebar } from './sidebar'
-import { Footer } from './footer'
+import Footer from './footer'
 
 const GlobalStyle = createGlobalStyle`
   #root {
@@ -213,7 +213,7 @@ function App () {
         content={content}
       />
       <Sidebar sidebarContent={members} handleClick={handleClick} />
-      <Footer />
+      <Footer>Some rights reserved.</Footer>
     </div>
   )
 }

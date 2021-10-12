@@ -1,9 +1,14 @@
-function Footer () {
-  return (
-    <footer className='footer'>
-      Some rights reserved.
-    </footer>
-  )
-}
+import styled from "styled-components"
 
-export { Footer }
+const Footer = styled.footer`
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-size: .8rem;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+`
+
+export default Footer
