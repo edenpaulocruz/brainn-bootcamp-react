@@ -190,7 +190,6 @@ const members = [
   }
 ]
 
-
 function App () {
   const [title, setTitle] = useState(members[0].title)
   const [content, setContent] = useState(members[0].content)

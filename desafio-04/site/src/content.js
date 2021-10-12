@@ -4,6 +4,7 @@ const Main = styled.main`
   width: 80%;
   min-width: 20rem;
   height: fit-content;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -20,6 +21,7 @@ const MemberName = styled.h1`
 const MemberPosition = styled.h2`
   width: 100%;
   padding: 0 0 1rem 1rem;
+  margin-bottom: 1rem;
 	background-color: var(--color-border);
 	font-weight: lighter;
 	color: var(--color-accent);
