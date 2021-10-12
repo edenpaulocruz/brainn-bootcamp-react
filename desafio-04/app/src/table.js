@@ -1,24 +1,44 @@
-import Title from "./title"
+import styled from 'styled-components'
+import Title from './title'
+
+const CarList = styled.div`
+  width: 75%;
+  margin-left: 25%;
+  padding: 40px 20px 20px;
+`
+
+const CarTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+`
+
+const Tr = styled.tr`
+  th, td {
+    padding: 1rem;
+    border: 1px solid #000;
+  }
+`
 
 function Table({ cars, handleDelete }) {
   return (
-    <div className='car-list'>
+    <CarList>
       <Title>Relação de veículos</Title>
-      <table className='car-table'>
+      <CarTable>
         <thead>
-          <tr>
+          <Tr>
             <th>Foto</th>
             <th>Marca / Modelo</th>
             <th>Ano</th>
             <th>Placa</th>
             <th>Cor</th>
             <th></th>
-          </tr>
+          </Tr>
         </thead>
         <tbody>
           {cars.map(car => {
             return (
-              <tr key={car.plate}>
+              <Tr key={car.plate}>
                 <td><img src={car.image} alt={car.brandModel} /></td>
                 <td>{car.brandModel}</td>
                 <td>{car.year}</td>
@@ -34,22 +54,22 @@ function Table({ cars, handleDelete }) {
                 <td>
                   <button onClick={() => handleDelete(car.plate)}>Excluir</button>
                 </td>
-              </tr>
+              </Tr>
             )
           })}
 
           {!!(cars.length === 0) && <NoCarsMessage />}
         </tbody>
-      </table>
-    </div>
+      </CarTable>
+    </CarList>
   )
 }
 
 function NoCarsMessage() {
   return (
-    <tr>
+    <Tr>
       <td colSpan='6'>Nenhum carro cadastrado</td>
-    </tr>
+    </Tr>
   )
 }
 
