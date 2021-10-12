@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Heading1 } from "./title"
+import Title from "./title"
 
 const Aside = styled.aside`
   width: 20%;
@@ -28,7 +28,7 @@ const AsideLink = styled.button`
 function Sidebar ({ sidebarContent, handleClick }) {
   return (
     <Aside>
-      <Heading1>Our team</Heading1>
+      <Title>Our team</Title>
       <ul>
         {sidebarContent.map((item) => (
           <li key={item.id}>

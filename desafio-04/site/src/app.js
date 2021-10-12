@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { createGlobalStyle } from 'styled-components'
 import Header from './header'
-import * as Title from './title'
+import Title from './title'
 import Menu from './menu'
-import { ButtonSecondary } from './button'
+import { ButtonSecondary } from './buttons'
 import { Content, MemberAvatar, MemberPosition, MemberDescription } from './content'
 import { Sidebar } from './sidebar'
 import Footer from './footer'
@@ -204,7 +204,7 @@ function App () {
     <div className='app'>
       <GlobalStyle />
       <Header>
-        <Title.Heading1>App</Title.Heading1>
+        <Title>App</Title>
         <Menu />
         <ButtonSecondary>Say Hello</ButtonSecondary>
       </Header>
