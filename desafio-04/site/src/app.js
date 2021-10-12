@@ -4,7 +4,7 @@ import Header from './header'
 import * as Title from './title'
 import Menu from './menu'
 import { ButtonSecondary } from './button'
-import { Content, MemberAvatar, MemberPosition } from './content'
+import { Content, MemberAvatar, MemberPosition, MemberDescription } from './content'
 import { Sidebar } from './sidebar'
 import { Footer } from './footer'
 
@@ -47,20 +47,20 @@ const members = [
         <MemberAvatar>
           <img src='https://pbs.twimg.com/profile_images/1415288716415877121/zK7lC5Ns.jpg' alt='Fernando Daciuk' />
         </MemberAvatar>
-        <div className='member-description'>
+        <MemberDescription>
           <p>Teacher and web developer, focused on JavaScript, both on client and server (with Node.js).</p>
-          <Title.Heading3>Experience</Title.Heading3>
+          <h3>Experience</h3>
           <ul>
             <li className='experience'>
-              <Title.Heading4>Founder &amp; Teacher</Title.Heading4>
+              <h4>Founder &amp; Teacher</h4>
               queroser.ninja
             </li>
             <li className='experience'>
-              <Title.Heading4>Founder &amp; CTO</Title.Heading4>
+              <h4>Founder &amp; CTO</h4>
               Lukin Co.
             </li>
           </ul>
-        </div>
+        </MemberDescription>
       </>,
   },
   {
@@ -68,24 +68,24 @@ const members = [
     title: 'Diego Moretti',
     content:
       <>
-        <Title.Heading2>Developer Relations</Title.Heading2>
-        <div className='member-avatar'>
+        <MemberPosition>Developer Relations</MemberPosition>
+        <MemberAvatar>
           <img src='https://pbs.twimg.com/profile_images/1432437836800794636/_TEdKmBy_400x400.jpg' className='avatar' alt='Diego Moretti'/>
-        </div>
-        <div className='member-description'>
+        </MemberAvatar>
+        <MemberDescription>
           <p>Tech, Web &amp; Community specialist.</p>
-          <Title.Heading3>Experience</Title.Heading3>
+          <h3>Experience</h3>
           <ul>
             <li className="experience">
-              <Title.Heading4>Co-Creator &amp; Member</Title.Heading4>
+              <h4>Co-Creator &amp; Member</h4>
               Front-End Brasil
             </li>
             <li className="experience">
-              <Title.Heading4>Founder &amp; Organizer</Title.Heading4>
+              <h4>Founder &amp; Organizer</h4>
               Front in Floripa
             </li>
           </ul>
-        </div>
+        </MemberDescription>
       </>
   },
   {
@@ -93,24 +93,24 @@ const members = [
     title: 'Adeonir Kohl',
     content:
       <>
-        <Title.Heading2>Front-end Developer</Title.Heading2>
-        <div className='member-avatar'>
+        <MemberPosition>Front-end Developer</MemberPosition>
+        <MemberAvatar>
           <img src='https://pbs.twimg.com/profile_images/1369253967939657729/q6bEIJ7A_400x400.jpg' className='avatar' alt='Adeonir Kohl'/>
-        </div>
-        <div className='member-description'>
+        </MemberAvatar>
+        <MemberDescription>
           <p>Web developer with background in Graphic Design and Photography.</p>
-          <Title.Heading3>Experience</Title.Heading3>
+          <h3>Experience</h3>
           <ul>
             <li className="experience">
-              <Title.Heading4>Web Developer and Visual Designer</Title.Heading4>
+              <h4>Web Developer and Visual Designer</h4>
               Freelance
             </li>
             <li className="experience">
-              <Title.Heading4>Lead UI Engineer</Title.Heading4>
+              <h4>Lead UI Engineer</h4>
               Joyjet Digital Space Agency
             </li>
           </ul>
-        </div>
+        </MemberDescription>
       </>
   },
   {
@@ -118,24 +118,24 @@ const members = [
     title: 'Amorésio de Souza',
     content:
     <>
-      <Title.Heading2>Back-end Product Developer</Title.Heading2>
-      <div className='member-avatar'>
+      <MemberPosition>Back-end Product Developer</MemberPosition>
+      <MemberAvatar>
         <img src='https://media-exp1.licdn.com/dms/image/C4D03AQHEvTjMNVNe7g/profile-displayphoto-shrink_800_800/0/1623081943299?e=1639008000&v=beta&t=CWuRsGOlYzAqj86haqG-yRbe7C3BFVPpEF62S-Dblk8' className='avatar' alt='Amorésio de Souza' />
-      </div>
-      <div className='member-description'>
+      </MemberAvatar>
+      <MemberDescription>
         <p>Computer Science Academic. Passionate about programming.</p>
-        <Title.Heading3>Experience</Title.Heading3>
+        <h3>Experience</h3>
         <ul>
           <li className="experience">
-            <Title.Heading4>Analista Programador</Title.Heading4>
+            <h4>Analista Programador</h4>
             Grupo Cometa
           </li>
           <li className="experience">
-            <Title.Heading4>Estagiário</Title.Heading4>
+            <h4>Estagiário</h4>
             Unemat Oficial - RISC Redes Inteligentes e Soluções Criativas
           </li>
         </ul>
-      </div>
+      </MemberDescription>
     </>
   },
   {
@@ -143,24 +143,24 @@ const members = [
     title: 'Pedro Azevedo',
     content:
     <>
-      <Title.Heading2>Front-End Developer | JavaScript | React Native | React</Title.Heading2>
-      <div className='member-avatar'>
+      <MemberPosition>Front-End Developer | JavaScript | React Native | React</MemberPosition>
+      <MemberAvatar>
         <img src='https://pbs.twimg.com/profile_images/1392878203606380545/ZYa3HMEt_400x400.jpg' className='avatar' alt="Pedro Azevedo" />
-      </div>
-      <div className='member-description'>
+      </MemberAvatar>
+      <MemberDescription>
         <p>Always willing to learn new technologies to improve my knowledge skills.</p>
-        <Title.Heading3>Experience</Title.Heading3>
+        <h3>Experience</h3>
         <ul>
           <li className="experience">
-            <Title.Heading4>Mobile Developer | React-Native</Title.Heading4>
+            <h4>Mobile Developer | React-Native</h4>
             Midway
           </li>
           <li className="experience">
-            <Title.Heading4>JavaScript Developer | React | React-Native</Title.Heading4>
+            <h4>JavaScript Developer | React | React-Native</h4>
             Concrete Solutions
           </li>
         </ul>
-      </div>
+      </MemberDescription>
     </>
   },
   {
@@ -168,24 +168,24 @@ const members = [
     title: 'Eden Paulo Cruz',
     content:
     <>
-      <Title.Heading2>Front-End Developer | JavaScript | React</Title.Heading2>
-      <div className='member-avatar'>
+      <MemberPosition>Front-End Developer | JavaScript | React</MemberPosition>
+      <MemberAvatar>
         <img src='https://pbs.twimg.com/profile_images/1252312349882626048/ZU7vOk2W_400x400.jpg' className='avatar' alt="Eden Paulo Cruz" />
-      </div>
-      <div className='member-description'>
+      </MemberAvatar>
+      <MemberDescription>
         <p>Eternal apprentice! Passionate about programming and always ready to help.</p>
-        <Title.Heading3>Experience</Title.Heading3>
+        <h3>Experience</h3>
         <ul>
           <li className="experience">
-            <Title.Heading4>Web Developer</Title.Heading4>
+            <h4>Web Developer</h4>
             Freelancer
           </li>
           <li className="experience">
-            <Title.Heading4>IT Technician</Title.Heading4>
+            <h4>IT Technician</h4>
             Self Employee
           </li>
         </ul>
-      </div>
+      </MemberDescription>
     </>
   }
 ]

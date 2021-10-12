@@ -35,6 +35,33 @@ const MemberAvatar = styled.div`
   }
 `
 
+const MemberDescription = styled.div`
+  width: calc(100% - 12rem);
+
+  h3 {
+    margin-bottom: .75rem;
+  }
+
+  h3, p {
+    font-size: 1.25rem;
+  }
+  
+  h4 {
+    font-size: 1rem;
+    margin-bottom: .25rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }  
+
+  li {
+    margin: 0 0 1rem 1rem;
+    list-style: square;
+  }
+`
+
 function Content ({title, content}) {
   return (
     <Main>
@@ -46,4 +73,4 @@ function Content ({title, content}) {
   )
 }
 
-export { Content, MemberPosition, MemberAvatar }
+export { Content, MemberPosition, MemberAvatar, MemberDescription }
